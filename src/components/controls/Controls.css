@@ -1,0 +1,13 @@
+label {
+  display: block;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Display() {
-  return <div>Display</div>;
+  return <div></div>;
 }

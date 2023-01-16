@@ -1,6 +1,13 @@
 import './Controls.css';
 
-export default function Controls() {
+export default function Controls({
+  setHeadCount,
+  setMiddleCount,
+  setPantsCount,
+  setCatchphrases,
+  setNewCatchphrase,
+  handleClick,
+}) {
   return (
     <div className="controls">
       <section className="head">
@@ -35,9 +42,9 @@ export default function Controls() {
 
       <section className="catchphrase">
         <label htmlFor="catchphrase">Catchphrase</label>
-        <input type="text" id="catchphrase" />
+        <input onChange={(e) => setNewCatchphrase(e.target.value)} type="text" id="catchphrase" />
       </section>
-      <button>Submit</button>
+      <button onClick={handleClick}>Submit</button>
     </div>
   );
 }

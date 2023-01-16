@@ -9,6 +9,9 @@ export default function Main() {
   const [pantsCount, setPantsCount] = useState(0);
   const [newCatchphrase, setNewCatchphrase] = useState('');
   const [catchphrases, setCatchphrases] = useState([]);
+  const [head, setHead] = useState('horse');
+  const [middle, setMiddle] = useState('red');
+  const [pants, setPants] = useState('leg');
 
   const handleClick = () => {
     let input = document.getElementById('catchphrase');
@@ -16,16 +19,19 @@ export default function Main() {
     input.value = '';
   };
 
-  const onHeadChange = () => {
+  const onHeadChange = (head) => {
     setHeadCount(headCount + 1);
+    setHead(head);
   };
 
-  const onMiddleChange = () => {
+  const onMiddleChange = (middle) => {
     setMiddleCount(middleCount + 1);
+    setMiddle(middle);
   };
 
-  const onPantsChange = () => {
+  const onPantsChange = (pants) => {
     setPantsCount(pantsCount + 1);
+    setPants(pants);
   };
 
   return (
@@ -47,7 +53,7 @@ export default function Main() {
         pantsCount={pantsCount}
         catchphrases={catchphrases}
       />
-      <Display />
+      <Display head={head} middle={middle} pants={pants} />
     </div>
   );
 }

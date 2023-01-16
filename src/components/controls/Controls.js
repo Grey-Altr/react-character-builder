@@ -7,12 +7,15 @@ export default function Controls({
   setCatchphrases,
   setNewCatchphrase,
   handleClick,
+  onHeadChange,
+  onMiddleChange,
+  onPantsChange,
 }) {
   return (
     <div className="controls">
       <section className="head">
         <label htmlFor="head">Head</label>
-        <select name="head" id="head">
+        <select onChange={(e) => onHeadChange(e.target.value)} name="head" id="head">
           <option value="dog">Dog</option>
           <option value="bird">Bird</option>
           <option value="duck">Duck</option>
@@ -22,7 +25,7 @@ export default function Controls({
 
       <section className="middle">
         <label htmlFor="middle">Middle</label>
-        <select name="middle" id="middle">
+        <select onChange={(e) => onMiddleChange(e.target.value)} name="middle" id="middle">
           <option value="blue">Blue</option>
           <option value="fancy">Fancy</option>
           <option value="pink">Pink</option>
@@ -32,7 +35,7 @@ export default function Controls({
 
       <section className="pants">
         <label htmlFor="pants">Pants</label>
-        <select name="pants" id="pants">
+        <select onChange={(e) => onPantsChange(e.target.value)} name="pants" id="pants">
           <option value="blue">Blue</option>
           <option value="dog">Dog</option>
           <option value="leg">Leg</option>

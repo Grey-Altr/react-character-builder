@@ -16,6 +16,18 @@ export default function Main() {
     input.value = '';
   };
 
+  const onHeadChange = () => {
+    setHeadCount(headCount + 1);
+  };
+
+  const onMiddleChange = () => {
+    setMiddleCount(middleCount + 1);
+  };
+
+  const onPantsChange = () => {
+    setPantsCount(pantsCount + 1);
+  };
+
   return (
     <div>
       <Controls
@@ -25,6 +37,9 @@ export default function Main() {
         setCatchphrases={setCatchphrases}
         setNewCatchphrase={setNewCatchphrase}
         handleClick={handleClick}
+        onHeadChange={onHeadChange}
+        onMiddleChange={onMiddleChange}
+        onPantsChange={onPantsChange}
       />
       <Stats
         headCount={headCount}

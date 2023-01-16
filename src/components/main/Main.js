@@ -1,6 +1,7 @@
 import Controls from '../controls/Controls.js';
 import Display from '../display/Display.js';
 import Stats from '../stats/Stats.js';
+import './Main.css';
 import { useState } from 'react';
 
 export default function Main() {
@@ -35,12 +36,9 @@ export default function Main() {
   };
 
   return (
-    <div>
+    <div className="main">
+      <h2>Character Builder</h2>
       <Controls
-        setHeadCount={setHeadCount}
-        setMiddleCount={setMiddleCount}
-        setPantsCount={setPantsCount}
-        setCatchphrases={setCatchphrases}
         setNewCatchphrase={setNewCatchphrase}
         handleClick={handleClick}
         onHeadChange={onHeadChange}

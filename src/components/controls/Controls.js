@@ -1,10 +1,6 @@
 import './Controls.css';
 
 export default function Controls({
-  setHeadCount,
-  setMiddleCount,
-  setPantsCount,
-  setCatchphrases,
   setNewCatchphrase,
   handleClick,
   onHeadChange,
